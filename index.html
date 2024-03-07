@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Background with To-Do List</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: black; /* Fallback color if video is unavailable */
+    }
+    #video-background {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1; /* Place the video behind other content */
+    }
+    #content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      z-index: 1; /* Place the content above the video */
+    }
+    #todo-list {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+<video autoplay muted loop id="video-background">
+  <source src="The city of white nights - Saint Petersburg drone video Timelab.pro.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div id="content">
+  <div id="todo-list">
+    <h2>My To-Do List</h2>
+    <ul>
+      <li><a href="#">Task 1</a></li>
+      <li><a href="#">Task 2</a></li>
+      <li><a href="#">Task 3</a></li>
+      <!-- Add more tasks as needed -->
+    </ul>
+  </div>
+</div>
+</body>
+</html>
